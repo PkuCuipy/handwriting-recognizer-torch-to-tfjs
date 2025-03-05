@@ -24,8 +24,8 @@ const HandwritingRecognitionApp = () => {
     async function loadModel() {
       try {
         // modelRef.current = await tf.loadGraphModel('model.json');
-        modelRef.current = await tf.loadGraphModel('https://pkucuipy.github.io/handwriting-recognizer-torch-to-tfjs/model.json');
-        // modelRef.current = await tf.loadGraphModel(`${import.meta.env.BASE_URL}model.json`);
+        // modelRef.current = await tf.loadGraphModel('https://pkucuipy.github.io/handwriting-recognizer-torch-to-tfjs/model.json');
+        modelRef.current = await tf.loadGraphModel(`${import.meta.env.BASE_URL}model.json`);
         console.log(`${import.meta.env.BASE_URL}model.json`);
         
         setmodelReady(true);
