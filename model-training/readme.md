@@ -28,3 +28,9 @@ pip install torch torchvision matplotlib
 - `format.py`: Load the `.pth` file and save to `SavedModel` format
 - `tf_test.py`: Load the `SavedModel` and test with TensorFlow
 
+## SavedModel → TensorFlow.js Format
+```sh
+pip install tensorflowjs
+tensorflowjs_converter --input_format=tf_saved_model mnist_keras ./mnist_tfjs
+```
+> Note: The installation of `tensorflowjs_converter` will break the `tensorflow` version compatibility. It is recommended to install `tensorflowjs` in a separate environment.
